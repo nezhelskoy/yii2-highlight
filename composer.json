@@ -1,0 +1,50 @@
+{
+    "name": "nezhelskoy/yii2-highlight",
+    "description": "Yii2 highlight.js extension",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "highlight", "highlight.js"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Dmitry Nezhelskoy",
+            "email": "dmitry@nezhelskoy.ru",
+            "homepage": "http://nezhelskoy.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "isagalaev/highlight.js": "*"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "isagalaev/highlight.js",
+                "version": "8.1",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/isagalaev/highlight.js",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "python3 vendor/isagalaev/highlight.js/tools/build.py :common"
+        ],
+        "post-update-cmd": [
+            "python3 vendor/isagalaev/highlight.js/tools/build.py :common"
+        ]
+    },
+    "config": {
+        "process-timeout": 600
+    },
+    "autoload": {
+            "psr-4": {
+                    "nezhelskoy\\highlight\\": ""
+            }
+    }
+}
