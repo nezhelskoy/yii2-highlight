@@ -11,26 +11,25 @@
             "homepage": "http://nezhelskoy.ru"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": "*",
-        "isagalaev/highlight.js": "*"
-    },
     "repositories": [
         {
             "type": "package",
             "package": {
                 "name": "isagalaev/highlight.js",
                 "version": "8.1",
-                "source": {
+                "dist": {
                     "type": "git",
-                    "url": "https://github.com/isagalaev/highlight.js",
-                    "reference": "master"
+                    "url": "https://github.com/isagalaev/highlight.js"
                 }
             }
         }
     ],
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "isagalaev/highlight.js": "*"
+    },
+    "minimum-stability": "dev",
     "scripts": {
         "post-install-cmd": [
             "python3 vendor/isagalaev/highlight.js/tools/build.py :common"
