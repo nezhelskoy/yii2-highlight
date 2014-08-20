@@ -12,11 +12,6 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": "*",
-        "isagalaev/highlight.js": "*"
-    },
     "repositories": [
         {
             "type": "package",
@@ -31,6 +26,11 @@
             }
         }
     ],
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "isagalaev/highlight.js": "*"
+    },
     "scripts": {
         "post-install-cmd": [
             "python3 vendor/isagalaev/highlight.js/tools/build.py :common"
