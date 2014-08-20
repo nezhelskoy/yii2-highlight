@@ -18,10 +18,10 @@ class BootstrapAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/isagalaev/highlight.js/';
     public $css = [
-        'src/styles/default.css',
+        'dist/styles/default.css',
     ];
     public $js = [
-        'build/highlight.pack.js',
+        'dist/highlight.pack.js',
     ];
     public $depends = [
         'app\assets\AppAsset',
