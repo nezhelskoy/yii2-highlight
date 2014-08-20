@@ -26,4 +26,10 @@ class HighlightAsset extends AssetBundle
     public $depends = [
         'app\assets\AppAsset',
     ];
+
+    public static function register($view)
+    {
+        $view->registerJs('hljs.initHighlightingOnLoad();');
+        parent::register($view);
+    }
 }
