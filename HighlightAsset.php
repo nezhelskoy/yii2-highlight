@@ -14,9 +14,9 @@ use yii\web\AssetBundle;
  *
  * @author Dmitry Nezhelskoy <dmitry@nezhelskoy.ru>
  */
-class BootstrapAsset extends AssetBundle
+class HighlightAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/isagalaev/highlight.js/';
+    public $sourcePath = '@vendor/nezhelskoy/yii2-highlight/';
     public $css = [
         'dist/styles/default.css',
     ];
