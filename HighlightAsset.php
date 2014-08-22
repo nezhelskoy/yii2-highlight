@@ -27,9 +27,14 @@ class HighlightAsset extends AssetBundle
         'app\assets\AppAsset',
     ];
 
+    /*
+     * @var string the options to be declared as js object with global [configuration](http://highlightjs.readthedocs.org/en/latest/api.html#configure-options)
+     */
+    public static $options = '{}';
+
     public static function register($view)
     {
-        $view->registerJs('hljs.initHighlightingOnLoad();');
+        $view->registerJs('hljs.initHighlightingOnLoad(' . self::$options . ');');
         parent::register($view);
     }
 }
