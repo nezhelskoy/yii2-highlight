@@ -2,9 +2,16 @@
 
 ### Install via Composer
 
-In "composer.json" your project, add the section "require" the following line:
+In "composer.json" your project, add the following lines:
 
 ~~~
+    "repositories": [
+        ...
+        {
+            "type": "vcs",
+            "url": "https://github.com/nezhelskoy/yii2-highlight"
+        }
+    ],
     "require": {
         ...
         "nezhelskoy/yii2-highlight": "*"
