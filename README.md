@@ -2,13 +2,19 @@
 
 ### Install via Composer
 
-If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
-at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
+In "composer.json" your project, add the section "require" the following line:
 
-You can then install dependencies of this extension using the following command:
+~~~
+    "require": {
+        ...
+        "nezhelskoy/yii2-highlight": "*"
+    },
+~~~
 
-~~~bash
-php composer.phar install
+Then update your project:
+
+~~~
+php composer.phar update --prefer-dist
 ~~~
 
 ### Usage
