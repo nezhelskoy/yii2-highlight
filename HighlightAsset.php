@@ -1,5 +1,6 @@
 <?php
 /**
+ * @author Dmitry Nezhelskoy <dmitry@nezhelskoy.ru>
  * @link https://github.com/nezhelskoy/yii2-highlight
  * @copyright Copyright (c) 2014 Dmitry Nezhelskoy
  * @license "BSD-3-Clause"
@@ -11,8 +12,6 @@ use yii\web\AssetBundle;
 
 /**
  * Asset bundle for the Highlight.js library.
- *
- * @author Dmitry Nezhelskoy <dmitry@nezhelskoy.ru>
  */
 class HighlightAsset extends AssetBundle
 {
