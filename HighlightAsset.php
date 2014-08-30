@@ -31,9 +31,13 @@ class HighlightAsset extends AssetBundle
      */
     public static $options = '{}';
 
+    /**
+     * @param View $view
+     * @return static the registered asset bundle instance
+     */
     public static function register($view)
     {
         $view->registerJs('hljs.initHighlightingOnLoad(' . self::$options . ');');
-        parent::register($view);
+        return parent::register($view);
     }
 }
