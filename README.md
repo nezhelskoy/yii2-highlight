@@ -1,28 +1,22 @@
 # Yii2 highlight.js extension
 
-### Install via Composer
+### Installation
 
-In "composer.json" your project, add the following lines:
+The preferred way to install this extension is through [composer](https://getcomposer.org/).
 
-~~~
-    "repositories": [
-        ...
-        {
-            "type": "vcs",
-            "url": "https://github.com/nezhelskoy/yii2-highlight"
-        }
-    ],
-    "require": {
-        ...
-        "nezhelskoy/yii2-highlight": "*"
-    },
-~~~
-
-Then update your project:
+Either run
 
 ~~~
-php composer.phar update --prefer-dist
+php composer.phar require --prefer-dist nezhelskoy/yii2-highlight "*"
 ~~~
+
+Or add
+
+~~~
+"nezhelskoy/yii2-highlight": "*"
+~~~
+
+to the require section of your `composer.json` file.
 
 ### Usage
 
