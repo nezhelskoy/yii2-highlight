@@ -46,17 +46,16 @@ class HighlightAsset extends AssetBundle
     {
         $options = empty(self::$options) ? '' : Json::encode(self::$options);
 
-        if (self::$selector != 'pre code') {
-            $js = '
-                hljs.configure('.$options.');
-                jQuery(\''.self::$selector.'\').each(function(i, block) {
+        if (self::$selector !== 'pre code') {
+            $view->registerJs('
+                hljs.configure(' . $options . ');
+                jQuery(\'' . self::$selector . '\').each(function(i, block) {
                     hljs.highlightBlock(block);
-                });
-                ';
+                });');
         } else {
-            $js = 'hljs.initHighlightingOnLoad(' . $options . ');';
+            $view->registerJs('hljs.initHighlightingOnLoad();', View::POS_HEAD);
         }
-        $view->registerJs($js);
+
         return parent::register($view);
     }
 
