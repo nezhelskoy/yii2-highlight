@@ -17,6 +17,8 @@ use yii\helpers\Json;
  */
 class HighlightAsset extends AssetBundle
 {
+    const DEFAULT_SELECTOR = 'pre code';
+
     public $sourcePath = '@vendor/nezhelskoy/yii2-highlight/';
     public $css = [
         'dist/styles/default.css',
@@ -31,7 +33,7 @@ class HighlightAsset extends AssetBundle
     /**
      * @var string Preferred selector on which code Highlight would be applied.
      */
-    public static $selector = 'pre code';
+    public static $selector = self::DEFAULT_SELECTOR;
 
     /**
      * @var array of options to be declared as js object with global [configuration](http://highlightjs.readthedocs.org/en/latest/api.html#configure-options)
@@ -46,7 +48,7 @@ class HighlightAsset extends AssetBundle
     {
         $options = empty(self::$options) ? '' : Json::encode(self::$options);
 
-        if (self::$selector !== 'pre code') {
+        if (self::$selector !== self::DEFAULT_SELECTOR) {
             $view->registerJs('
                 hljs.configure(' . $options . ');
                 jQuery(\'' . self::$selector . '\').each(function(i, block) {
