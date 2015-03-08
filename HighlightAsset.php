@@ -45,25 +45,25 @@ class HighlightAsset extends AssetBundle
         $options = empty(self::$options) ? '' : Json::encode(self::$options);
 
         if (self::$selector != 'pre code') {
-          $js = '
-              hljs.configure('.$options.');
-              jQuery(\''.self::$selector.'\').each(function(i, block) {
-                hljs.highlightBlock(block);
-              });
-              ';
+            $js = '
+                hljs.configure('.$options.');
+                jQuery(\''.self::$selector.'\').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+                ';
         } else {
-          $js = 'hljs.initHighlightingOnLoad(' . $options . ');';
+            $js = 'hljs.initHighlightingOnLoad(' . $options . ');';
         }
         $view->registerJs($js);
         return parent::register($view);
     }
-    
-        /**
+
+    /**
      * Required setter by Yii's Dependency Injection to work properly.
      * @param array $options
      */
     public function setOptions($options) {
-      self::$options = $options;
+        self::$options = $options;
     }
 
     /**
@@ -71,6 +71,6 @@ class HighlightAsset extends AssetBundle
      * @param string $selector
      */
     public function setSelector($selector) {
-      self::$selector = $selector;
+        self::$selector = $selector;
     }
 }
