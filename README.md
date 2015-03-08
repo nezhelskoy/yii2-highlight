@@ -48,7 +48,24 @@ You can override style in your config file, e.g. `config/web.php`:
     ],
 ~~~
 
-**NOTICE** If you overriding asset configuration inside your config file, than you should call for asset register method inside your view like so:
+If you need custom cofiguraton of `selector` or `options` properties, like
+
+~~~php
+    'components' => [
+                ...
+                'nezhelskoy\highlight\HighlightAsset' => [
+                    'selector' => '.is-highlighted',
+                    'options' => [
+                        'classPrefix' => 'custom-',
+                        'useBR' => true,
+                    ],
+                    'css' => ['dist/styles/zenburn.css'],
+                ],
+                ...
+    ],
+~~~
+
+then you should call for asset register method inside your view like so
 
 ~~~php
 \Yii::$app->getAssetManager()->getBundle('nezhelskoy\highlight\HighlightAsset')->register($this);
