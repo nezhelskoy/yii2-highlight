@@ -44,7 +44,7 @@ class HighlightAsset extends AssetBundle
      * @param View $view
      * @return static the registered asset bundle instance
      */
-    public static function register(View $view)
+    public static function register($view)
     {
         $options = empty(self::$options) ? '' : Json::encode(self::$options);
 
