@@ -9,6 +9,8 @@
 namespace nezhelskoy\highlight;
 
 use yii\web\AssetBundle;
+use yii\web\View;
+use yii\helpers\Json;
 
 /**
  * Asset bundle for the Highlight.js library.
@@ -26,12 +28,12 @@ class HighlightAsset extends AssetBundle
         'app\assets\AppAsset',
     ];
 
-    /*
+    /**
      * @var string Preferred selector on which code Highlight would be applied.
      */
     public static $selector = 'pre code';
 
-    /*
+    /**
      * @var array of options to be declared as js object with global [configuration](http://highlightjs.readthedocs.org/en/latest/api.html#configure-options)
      */
     public static $options = [];
@@ -40,7 +42,7 @@ class HighlightAsset extends AssetBundle
      * @param View $view
      * @return static the registered asset bundle instance
      */
-    public static function register($view)
+    public static function register(View $view)
     {
         $options = empty(self::$options) ? '' : Json::encode(self::$options);
 
