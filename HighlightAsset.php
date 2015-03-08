@@ -53,7 +53,11 @@ class HighlightAsset extends AssetBundle
                     hljs.highlightBlock(block);
                 });');
         } else {
-            $view->registerJs('hljs.initHighlightingOnLoad();', View::POS_HEAD);
+            $view->registerJs('
+                hljs.configure(' . $options . ');
+                hljs.initHighlightingOnLoad();',
+                View::POS_END
+            );
         }
 
         return parent::register($view);
