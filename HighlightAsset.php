@@ -27,9 +27,14 @@ class HighlightAsset extends AssetBundle
     ];
 
     /*
-     * @var string the options to be declared as js object with global [configuration](http://highlightjs.readthedocs.org/en/latest/api.html#configure-options)
+     * @var string Preferred selector on which code Highlight would be applied.
      */
-    public static $options = '{}';
+    public static $selector = 'pre code';
+
+    /*
+     * @var array of options to be declared as js object with global [configuration](http://highlightjs.readthedocs.org/en/latest/api.html#configure-options)
+     */
+    public static $options = [];
 
     /**
      * @param View $view
@@ -37,7 +42,35 @@ class HighlightAsset extends AssetBundle
      */
     public static function register($view)
     {
-        $view->registerJs('hljs.initHighlightingOnLoad(' . self::$options . ');');
+        $options = empty(self::$options) ? '' : Json::encode(self::$options);
+
+        if (self::$selector != 'pre code') {
+            $js = '
+                hljs.configure('.$options.');
+                jQuery(\''.self::$selector.'\').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+                ';
+        } else {
+            $js = 'hljs.initHighlightingOnLoad(' . $options . ');';
+        }
+        $view->registerJs($js);
         return parent::register($view);
+    }
+
+    /**
+     * Setter for static $options property. Makes this property to be confugurable.
+     * @param array $options
+     */
+    public function setOptions($options) {
+        self::$options = $options;
+    }
+
+    /**
+     * Setter for static $selector property. Makes this property to be confugurable.
+     * @param string $selector
+     */
+    public function setSelector($selector) {
+        self::$selector = $selector;
     }
 }
