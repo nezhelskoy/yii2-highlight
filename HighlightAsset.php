@@ -59,7 +59,7 @@ class HighlightAsset extends AssetBundle
     }
 
     /**
-     * Required setter by Yii's Dependency Injection to work properly.
+     * Setter for static $options property. Makes this property to be confugurable.
      * @param array $options
      */
     public function setOptions($options) {
@@ -67,7 +67,7 @@ class HighlightAsset extends AssetBundle
     }
 
     /**
-     * Required setter by Yii's Dependency Injection to work properly.
+     * Setter for static $selector property. Makes this property to be confugurable.
      * @param string $selector
      */
     public function setSelector($selector) {
