@@ -48,6 +48,12 @@ You can override style in your config file, e.g. `config/web.php`:
     ],
 ~~~
 
+**NOTICE** If you overriding asset configuration inside your config file, than you should call for asset register method inside your view like so:
+
+~~~php
+\Yii::$app->getAssetManager()->getBundle('nezhelskoy\highlight\HighlightAsset')->register($this);
+~~~
+
 ## License
 
 yii2-highlight is released under the BSD License. See [LICENSE.md](https://github.com/nezhelskoy/yii2-highlight/blob/master/LICENSE.md) file for
