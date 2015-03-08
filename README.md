@@ -52,7 +52,9 @@ If you need custom cofiguraton of `selector` or `options` properties, like
 
 ~~~php
     'components' => [
-                ...
+        ...
+        'assetManager' => [
+            'bundles' => [
                 'nezhelskoy\highlight\HighlightAsset' => [
                     'selector' => '.is-highlighted',
                     'options' => [
@@ -61,7 +63,9 @@ If you need custom cofiguraton of `selector` or `options` properties, like
                     ],
                     'css' => ['dist/styles/zenburn.css'],
                 ],
-                ...
+            ]
+        ],
+        ...
     ],
 ~~~
 
