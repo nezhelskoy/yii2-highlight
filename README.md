@@ -48,7 +48,7 @@ You can override style in your config file, e.g. `config/web.php`:
     ],
 ~~~
 
-If you need custom cofiguraton of `selector` or `options` properties, like
+Example of custom cofiguraton of `selector` or `options` properties
 
 ~~~php
     'components' => [
@@ -67,12 +67,6 @@ If you need custom cofiguraton of `selector` or `options` properties, like
         ],
         ...
     ],
-~~~
-
-then you should call for asset register method inside your view like so
-
-~~~php
-\Yii::$app->getAssetManager()->getBundle('nezhelskoy\highlight\HighlightAsset')->register($this);
 ~~~
 
 ## License
