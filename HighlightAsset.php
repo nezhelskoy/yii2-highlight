@@ -27,7 +27,7 @@ class HighlightAsset extends AssetBundle
         'dist/highlight.pack.js',
     ];
     public $depends = [
-        'app\assets\AppAsset',
+        'yii\web\JqueryAsset',
     ];
 
     /**
