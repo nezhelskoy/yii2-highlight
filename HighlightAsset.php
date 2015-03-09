@@ -33,12 +33,12 @@ class HighlightAsset extends AssetBundle
     /**
      * @var string Preferred selector on which code Highlight would be applied.
      */
-    public static $selector = self::DEFAULT_SELECTOR;
+    public $selector = self::DEFAULT_SELECTOR;
 
     /**
      * @var array of options to be declared as js object with global [configuration](http://highlightjs.readthedocs.org/en/latest/api.html#configure-options)
      */
-    public static $options = [];
+    public $options = [];
 
     /**
      * @param View $view
@@ -46,12 +46,22 @@ class HighlightAsset extends AssetBundle
      */
     public static function register($view)
     {
-        $options = empty(self::$options) ? '' : Json::encode(self::$options);
+        $configOptions  = [];
+        $configSelector = self::DEFAULT_SELECTOR;
+        try {
+            $thisBundle = \Yii::$app->getAssetManager()->getBundle(__NAMESPACE__ . "\\" . __CLASS__);
+            $configOptions  = $thisBundle->options;
+            $configSelector = $thisBundle->selector;
+        } catch(\Exception $e) {
+            // do nothing...
+        }
 
-        if (self::$selector !== self::DEFAULT_SELECTOR) {
+        $options = empty($configOptions) ? '' : Json::encode($configOptions);
+
+        if ($configSelector !== self::DEFAULT_SELECTOR) {
             $view->registerJs('
                 hljs.configure(' . $options . ');
-                jQuery(\'' . self::$selector . '\').each(function(i, block) {
+                jQuery(\'' . $configSelector . '\').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });');
         } else {
@@ -63,21 +73,5 @@ class HighlightAsset extends AssetBundle
         }
 
         return parent::register($view);
-    }
-
-    /**
-     * Setter for static $options property. Makes this property to be confugurable.
-     * @param array $options
-     */
-    public function setOptions($options) {
-        self::$options = $options;
-    }
-
-    /**
-     * Setter for static $selector property. Makes this property to be confugurable.
-     * @param string $selector
-     */
-    public function setSelector($selector) {
-        self::$selector = $selector;
     }
 }
