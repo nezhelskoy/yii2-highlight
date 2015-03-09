@@ -49,7 +49,7 @@ class HighlightAsset extends AssetBundle
         $configOptions  = [];
         $configSelector = self::DEFAULT_SELECTOR;
         try {
-            $thisBundle = \Yii::$app->getAssetManager()->getBundle(__NAMESPACE__ . "\\" . __CLASS__);
+            $thisBundle = \Yii::$app->getAssetManager()->getBundle(__CLASS__);
             $configOptions  = $thisBundle->options;
             $configSelector = $thisBundle->selector;
         } catch(\Exception $e) {
