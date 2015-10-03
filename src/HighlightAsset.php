@@ -1,8 +1,8 @@
 <?php
 /**
- * @author Dmitry Nezhelskoy <dmitry@nezhelskoy.ru>
+ * @author Dmitry Nezhelskoy <dmitry@nezhelskoy.pro>
  * @link https://github.com/nezhelskoy/yii2-highlight
- * @copyright Copyright (c) 2014 Dmitry Nezhelskoy
+ * @copyright Copyright (c) 2014-2015 Dmitry Nezhelskoy
  * @license "BSD-3-Clause"
  */
 
@@ -19,7 +19,7 @@ class HighlightAsset extends AssetBundle
 {
     const DEFAULT_SELECTOR = 'pre code';
 
-    public $sourcePath = '@vendor/nezhelskoy/yii2-highlight/';
+    public $sourcePath = '@vendor/nezhelskoy/yii2-highlight/src/';
     public $css = [
         'dist/styles/default.css',
     ];
