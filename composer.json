@@ -17,7 +17,12 @@
     },
     "autoload": {
             "psr-4": {
-                    "nezhelskoy\\highlight\\": ""
+                    "nezhelskoy\\highlight\\": "src/"
             }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "bower-asset-library": "vendor/bower"
+        }
     }
 }
