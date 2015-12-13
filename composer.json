@@ -6,9 +6,9 @@
     "license": "BSD-3-Clause",
     "authors": [
         {
-            "name": "Dmitry Nezhelskoy",
-            "email": "dmitry@nezhelskoy.ru",
-            "homepage": "http://nezhelskoy.ru"
+            "name": "Dmitry A. Nezhelskoy",
+            "email": "dmitry@nezhelskoy.pro",
+            "homepage": "http://nezhelskoy.pro"
         }
     ],
     "require": {
