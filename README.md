@@ -69,6 +69,24 @@ Example of custom cofiguraton of `selector` or `options` properties
     ],
 ~~~
 
+Using of custom build, located in `/js/highlight`, for example
+
+~~~php
+    'components' => [
+        ...
+        'assetManager' => [
+            'bundles' => [
+                'nezhelskoy\highlight\HighlightAsset' => [
+                    'sourcePath' => null,
+                    'css' => ['/js/highlight/styles/zenburn.css'],
+                    'js' => ['/js/highlight/highlight.pack.js'],
+                ],
+            ]
+        ],
+        ...
+    ],
+~~~
+
 ## License
 
 yii2-highlight is released under the BSD License. See [LICENSE.md](https://github.com/nezhelskoy/yii2-highlight/blob/master/LICENSE.md) file for
