@@ -11,7 +11,7 @@ $this->title = 'Yii2 Highlight usage example';
     <h1><?= $this->title ?></h1>
     <p>
         <pre>
-            <code class="php hljs"><?= $codeExample ?></code>
+            <code class="php"><?= $codeExample ?></code>
         </pre>
     </p>
 </div>
