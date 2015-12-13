@@ -1,3 +1,96 @@
+## Version 9.0.0
+
+The new major version brings a reworked styling system. Highlight.js now defines
+a limited set of highlightable classes giving a consistent result across all the
+styles and languages. You can read a more detailed explanation and background in
+the [tracking issue][#348] that started this long process back in May.
+
+This change is backwards incompatible for those who uses highlight.js with a
+custom stylesheet. The [new style guide][sg] explains how to write styles
+in this new world.
+
+Bundled themes have also suffered a significant amount of improvements and may
+look different in places, but all the things now consistent and make more sense.
+Among others, the Default style has got a refresh and will probably be tweaked
+some more in next releases. Please do give your feedback in our
+[issue tracker][issues].
+
+New languages in this release:
+
+- *Caché Object Script* by [Nikita Savchenko][]
+- *YAML* by [Stefan Wienert][]
+- *MIPS Assembler* by [Nebuleon Fumika][]
+- *HSP* by [prince][]
+
+Improvements to existing languages and styles:
+
+- ECMAScript 6 modules import now do not require closing semicolon.
+- ECMAScript 6 classes constructors now highlighted.
+- Template string support for Typescript, as for ECMAScript 6.
+- Scala case classes params highlight fixed.
+- Built-in names introduced in Julia v0.4 added by [Kenta Sato][].
+- Refreshed Default style.
+
+Other notable changes:
+
+- [Web workers support][webworkers] added bu [Jan Kühle][].
+- We now have tests for compressed browser builds as well.
+- The building tool chain has been switched to node.js 4.x. and is now
+  shamelessly uses ES6 features all over the place, courtesy of [Jeremy Hull][].
+- License added to non-compressed browser build.
+
+[Jan Kühle]: https://github.com/frigus02
+[Stefan Wienert]: https://github.com/zealot128
+[Kenta Sato]: https://github.com/bicycle1885
+[Nikita Savchenko]: https://github.com/ZitRos
+[webworkers]: https://github.com/isagalaev/highlight.js#web-workers
+[Jeremy Hull]: https://github.com/sourrust
+[#348]: https://github.com/isagalaev/highlight.js/issues/348
+[sg]: http://highlightjs.readthedocs.org/en/latest/style-guide.html
+[issues]: https://github.com/isagalaev/highlight.js/issues
+[Nebuleon Fumika]: https://github.com/Nebuleon
+[prince]: https://github.com/prince-0203
+
+## Version 8.9.1
+
+Some last-minute changes reverted due to strange bug with minified browser build:
+
+- Scala case classes params highlight fixed
+- ECMAScript 6 modules import now do not require closing semicolon
+- ECMAScript 6 classes constructors now highlighted
+- Template string support for Typescript, as for ECMAScript 6
+- License added to not minified browser build
+
+## Version 8.9.0
+
+New languages:
+
+- *crmsh* by [Kristoffer Gronlund][]
+- *SQF* by [Søren Enevoldsen][]
+
+Notable fixes and improvements to existing languages:
+
+- Added `abstract` and `namespace` keywords to TypeScript by [Daniel Rosenwasser][]
+- Added `label` support to Dockerfile by [Ladislav Prskavec][]
+- Crystal highlighting improved by [Tsuyusato Kitsune][]
+- Missing Swift keywords added by [Nate Cook][]
+- Improve detection of C block comments
+- ~~Scala case classes params highlight fixed~~
+- ~~ECMAScript 6 modules import now do not require closing semicolon~~
+- ~~ECMAScript 6 classes constructors now highlighted~~
+- ~~Template string support for Typescript, as for ECMAScript 6~~
+
+Other notable changes:
+
+- ~~License added to not minified browser build~~
+
+[Kristoffer Gronlund]: https://github.com/krig
+[Søren Enevoldsen]: https://github.com/senevoldsen90
+[Daniel Rosenwasser]: https://github.com/DanielRosenwasser
+[Ladislav Prskavec]: https://github.com/abtris
+[Tsuyusato Kitsune]: https://github.com/MakeNowJust
+[Nate Cook]: https://github.com/natecook1000
+
 ## Version 8.8.0
 
 New languages:
