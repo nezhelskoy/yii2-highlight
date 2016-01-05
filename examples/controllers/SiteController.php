@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace nezhelskoy\highlight\examples\controllers;
 
 use Yii;
 use yii\web\Controller;

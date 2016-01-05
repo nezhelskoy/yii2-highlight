@@ -17,7 +17,8 @@
     },
     "autoload": {
             "psr-4": {
-                    "nezhelskoy\\highlight\\": "src/"
+                    "nezhelskoy\\highlight\\": "src/",
+                    "nezhelskoy\\highlight\\examples\\": "examples/"
             }
     },
     "extra": {

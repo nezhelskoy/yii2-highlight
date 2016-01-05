@@ -5,6 +5,7 @@ $params = require(__DIR__ . '/params.php');
 $config = [
     'id' => 'yii2-highlight-example',
     'basePath' => dirname(__DIR__),
+    'controllerNamespace' => 'nezhelskoy\\highlight\\examples\\controllers',
     'vendorPath' => '@app/../vendor',
     'components' => [
         'request' => [
