@@ -1,3 +1,65 @@
+## Version 9.2.0
+
+New languages:
+
+- *QML* by [John Foster][]
+- *HTMLBars* by [Michael Johnston][]
+- *CSP* by [Taras][]
+- *Maxima* by [Robert Dodier][]
+
+New styles:
+
+- *Gruvbox* by [Qeole][]
+- *Dracula* by [Denis Ciccale][]
+
+Improvements to existing languages and styles:
+
+- We now correctly handle JSX with arbitrary node tree depth.
+- Argument list for `(lambda)` in Scheme is no longer highlighted as a function
+  call.
+- Stylus syntax doesn't break on valid CSS.
+- More correct handling of comments and strings and other improvements for
+  VimScript.
+- More subtle work on the default style.
+- We now use anonymous modules for AMD.
+- `macro_rules!` is now recognized as a built-in in Rust.
+
+[John Foster]: https://github.com/jf990
+[Qeole]: https://github.com/Qeole
+[Denis Ciccale]: https://github.com/dciccale
+[Michael Johnston]: https://github.com/lastobelus
+[Taras]: https://github.com/oxdef
+[Robert Dodier]: https://github.com/robert-dodier
+
+## Version 9.1.0
+
+New languages:
+
+- *Stan* by [Brendan Rocks][]
+- *BASIC* by [Raphaël Assénat][]
+- *GAUSS* by [Matt Evans][]
+- *DTS* by [Martin Braun][]
+- *Arduino* by [Stefania Mellai][]
+
+New Styles:
+
+- *Arduino Light* by [Stefania Mellai][]
+
+Improvements to existing languages and styles:
+
+- Handle return type annotations in Python
+- Allow shebang headers in Javascript
+- Support strings in Rust meta
+- Recognize `struct` as a class-level definition in Rust
+- Recognize b-prefixed chars and strings in Rust
+- Better numbers handling in Verilog
+
+[Brendan Rocks]: http://brendanrocks.com
+[Raphaël Assénat]: https://github.com/raphnet
+[Matt Evans]: https://github.com/matthewevans
+[Martin Braun]: https://github.com/mbr0wn
+[Stefania Mellai]: https://github.com/smellai
+
 ## Version 9.0.0
 
 The new major version brings a reworked styling system. Highlight.js now defines
@@ -66,7 +128,10 @@ Some last-minute changes reverted due to strange bug with minified browser build
 New languages:
 
 - *crmsh* by [Kristoffer Gronlund][]
-- *SQF* by [Søren Enevoldsen][]
+- *SQF* by [Soren Enevoldsen][]
+
+[Kristoffer Gronlund]: https://github.com/krig
+[Soren Enevoldsen]: https://github.com/senevoldsen90
 
 Notable fixes and improvements to existing languages:
 
@@ -130,7 +195,7 @@ New languages:
 - *AutoIt* by Manh Tuan from [J2TeaM][]
 - *Toml* (ini extension) by [Guillaume Gomez][]
 
-New Styles:
+New styles:
 
 - *Hopscotch* by [Jan T. Sott][]
 - *Grayscale* by [MY Sun][]
@@ -172,7 +237,7 @@ New languages:
 - *armasm* by [Dan Panzarella][]
 - *TP* by [Jay Strybis][]
 
-New Styles:
+New styles:
 
 - *Atelier Cave*, *Atelier Estuary*,
   *Atelier Plateau* and *Atelier Savanna* by [Bram de Haan][]
@@ -209,7 +274,7 @@ New languages:
 - *Fortran* by [Anthony Scemama][] and [Thomas Applencourt][]
 - *Kotlin* by [Sergey Mashkov][]
 
-New Styles:
+New styles:
 
 - *Agate* by [Taufik Nurrohman][]
 - *Darkula* by [Jet Brains][]
