@@ -1,3 +1,56 @@
+## Version 9.6.0
+
+New languages:
+
+- *ABNF* and *EBNF* by [Alex McKibben][]
+- *Awk* by [Matthew Daly][]
+- *SubUnit* by [Sergey Bronnikov][]
+
+New styles:
+
+- *Atom One* in both Dark and Light variants  by [Daniel Gamage][]
+
+Plus, a few smaller updates for *Lasso*, *Elixir*, *C++* and *SQL*.
+
+[Alex McKibben]: https://github.com/mckibbenta
+[Daniel Gamage]: https://github.com/danielgamage
+[Matthew Daly]: https://github.com/matthewbdaly
+[Sergey Bronnikov]: https://github.com/ligurio
+
+
+## Version 9.5.0
+
+New languages:
+
+- *Excel* by [Victor Zhou][]
+- *Linden Scripting Language* by [Builder's Brewery][]
+- *TAP* (Test Anything Protocol) by [Sergey Bronnikov][]
+- *Pony* by [Joe Eli McIlvain][]
+- *Coq* by [Stephan Boyer][]
+- *dsconfig* and *LDIF* by [Jacob Childress][]
+
+New styles:
+
+- *Ocean Dark* by [Gavin Siu][]
+
+Notable changes:
+
+- [Minh Nguyễn][] added more built-ins to Objective C.
+- [Jeremy Hull][] fixed corner cases in C++ preprocessor directives and Diff
+  comments.
+- [Victor Zhou][] added support for digit separators in C++ numbers.
+
+[Gavin Siu]: https://github.com/gavsiu
+[Builder's Brewery]: https://github.com/buildersbrewery
+[Victor Zhou]: https://github.com/OiCMudkips
+[Sergey Bronnikov]: https://github.com/ligurio
+[Joe Eli McIlvain]: https://github.com/jemc
+[Stephan Boyer]: https://github.com/boyers
+[Jacob Childress]: https://github.com/braveulysses
+[Minh Nguyễn]: https://github.com/1ec5
+[Jeremy Hull]: https://github.com/sourrust
+
+
 ## Version 9.4.0
 
 New languages:
@@ -349,7 +402,7 @@ New languages:
 New styles:
 
 - *Agate* by [Taufik Nurrohman][]
-- *Darkula* by [Jet Brains][]
+- *Darcula* by [JetBrains][]
 - *Atelier Sulphurpool* by [Bram de Haan][]
 - *Android Studio* by [Pedro Oliveira][]
 
